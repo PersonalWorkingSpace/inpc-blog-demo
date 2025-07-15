@@ -1,0 +1,72 @@
+:root {
+    --center-width : 800px;
+    --aside-width: 350px;
+    --default-font-size: 18px;
+    --note-font-size: 18px;
+}
+
+body {
+    margin: 0;
+    text-align: center;
+    font-size: 28px;
+}
+
+.banner {
+    background-color: #333;
+    color: #ffffff;
+}
+
+.post-title {
+    font-size: 28px;
+}
+
+.section-title {
+    font-size: 20px;
+    background-color: rgb(200, 238, 128);
+    margin: 1rem;
+}
+
+.container {
+    display: flex;
+    flex-flow: row no-wrap;
+    justify-content: center;
+    background-color: #ffffff;
+}
+
+.side-area {
+    flex: 2 2 var(--aside-width);
+    max-width: var(--aside-width);
+    padding: 1rem;
+    background-color: rgb(233, 202, 155);
+}
+
+.center-area {
+    flex: 1 1 var(--center-width);
+    max-width: var(--center-width);
+    padding: 1rem;
+    background-color: rgb(155, 201, 212);
+}
+
+section {
+    background-color: rgb(98, 162, 221);
+    margin: 1rem;
+    font-size: 24px;
+}
+
+.divimg {
+    background-color: rgb(231, 231, 113);
+    margin: 1rem;
+    font-size: 20px;
+}
+
+p.content-paragraph {
+    font-size: 14px;
+    margin: 1rem;
+    background-color: rgb(19, 56, 224);
+    color: whitesmoke
+}
+
+footer {
+    background-color: #333;
+    color: #ffffff;
+}
