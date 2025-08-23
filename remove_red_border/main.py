@@ -1,4 +1,3 @@
-from typing import Tuple, Dict
 import os
 import argparse
 import numpy as np
@@ -109,7 +108,7 @@ def remove_red_border_from_image(img: Image.Image,
     rgba = img.convert("RGBA")
     arr = np.array(rgba, dtype=np.uint8)
     out_arr = remove_red_frame(arr, red_fraction_threshold=red_fraction_threshold)
-    out_img = Image.fromarray(out_arr, mode="RGBA")
+    out_img = Image.fromarray(out_arr)
     return out_img
 
 
