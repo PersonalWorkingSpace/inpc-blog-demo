@@ -4,7 +4,7 @@ A simple Python code to replace the red borders in images in a specific director
 
 ### Install
 ```bash
-pip install -r requirements.txt
+pip install -r requirements
 ```
 ### Execution
 ```bash
