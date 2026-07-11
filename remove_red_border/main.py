@@ -119,15 +119,15 @@ def main():
     parser.add_argument("--frac", dest="frac", type=float, default=0.6, help="red fraction threshold per line")
     args = parser.parse_args()
 
-    images = glob(os.path.join(args.indir, "*.png"), recursive=True)
-    os.makedirs(args.outdir, exist_ok=True)
+    images = glob(os.path.join(args.indir, "**/*.png"), recursive=True)
     
     for img_file in images:
         print(f"Process image: {img_file}")
         img = Image.open(img_file)
         out_img = remove_red_border_from_image(img, red_fraction_threshold=args.frac)
-        img_name = os.path.basename(img_file)
-        out_file = os.path.join(args.outdir, img_name)
+        out_file = img_file.replace(args.indir, args.outdir)
+        os.makedirs(os.path.dirname(out_file), exist_ok=True)
+
         out_img.save(out_file)
         print(f"Done. Save file to {out_file}")
 
